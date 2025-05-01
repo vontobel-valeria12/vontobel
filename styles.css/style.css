@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+}
+
+.seitenmenü {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 99;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    transition: left 0.3s ease-in-out;
+}
+
+.seitenmenü.ativo {
+    left: 0;
+}
+
+.seitenmenü ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+}
+
+.seitenmenü ul li a {
+    color: #000; /* Mudado para preto para melhor visibilidade */
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.seitenmenü ul li a i {
+    font-size: 24px;
+}
+
+.seitenmenü ul li:hover {
+    background-color: midnightblue;
+}
+
+.seitenmenü ul li:hover a {
+    color: #fff; /* Muda a cor do texto ao passar o mouse */
+}
+
+.buttontoggle {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    background-color: #fff;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.buttontoggle:hover {
+    background-color: rgb(197, 203, 216);
+}
+
+.buttontoggle.ativo {
+    left: 320px;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+    .about {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 1rem;
+    }
+    .about img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .about h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  

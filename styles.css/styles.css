@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed; /* se quiser que ele fique fixo no topo mesmo ao rolar */
+    top: 0;
+    z-index: 10;
+    background-color: #000; /* para garantir que tenha fundo */
+    padding: 20px 0;
+}
+
+
+body {
+    font-family: Poppins,sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 130vh;
+    background: #000;
+}
+
+nav {
+    position: relative;
+    width: 524px;
+    height: 50px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+nav a:hover
+{
+    color: #ffa500;
+}
+
+nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+/* Animar barra quando o mouse passa sobre cada link */
+nav a:nth-child(1):hover ~ span {
+    left: 0;
+   
+}
+
+nav a:nth-child(2):hover ~ span {
+    left: 95px;
+   
+}
+
+nav a:nth-child(3):hover ~ span {
+    left: 189px;
+    width: 110px;
+}
+
+nav a:nth-child(4):hover ~ span {
+    left: 289px;
+    width: 115px;
+}
+
+nav a:nth-child(5):hover ~ span {
+    left: 413px;
+    width: 110px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 200px;
+    border: 1px;
+    gap: 20px;
+     justify-content: center;
+    margin-top: 40px;
+}
+
+.product {
+    background-color: white;
+    padding-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .recipe-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .recipe-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .recipe-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #1d3557;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
