@@ -66,7 +66,7 @@ header {
     width: 300px;
     height: 100%;
     background: white;
-    box-shadow: 0 0 10px rgba(236, 235, 236, 0.877);
+    box-shadow: 0 0 10px rgba(22, 21, 22, 0.877);
     transition: left 0.3s ease-in-out;
     z-index: 99;
   }
