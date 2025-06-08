@@ -46,8 +46,7 @@ h1 {
 
 header {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 0    top: 0;
     width: 100%;
     padding: 25px 9%;
     background: #c03c3c;
@@ -59,7 +58,7 @@ header {
 }
 
 img {
-  max-width: 90%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin: 30px auto 10px auto;;
