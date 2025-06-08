@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css/style.css"/>
+    <link rel="icon" href="imagem/ico/logo.jpg" type="image/x-icon">
+    <title>Für euch</title>
+</head>
+<body>
+    <div id="info">
+        <h1>Komm morgen wieder für eine neue Botschaft.</h1>
+        <p>
+  Manchmal reicht eine kleine Geste, um den Tag eines Menschen zu verändern.
+</p>
+    </div>
+  <div id="container">
+  Dieser Schlüsselanhänger führt eine Idee einer gutherzigen Frau aus meiner Verwandtschaft weiter!<br>
+  Sie entfand das öffnen der täglichen Post als mühsam . <br>
+  Der Briefkasten war gefüllt mit Werbung und Rechnungen nur selten war etwas positives drin.
+   </p>
+  <p id="texto-completo" style="display: none;">
+  So fing sie an den Alltag von ihren liebsten mit verschiedenen Briefen zu versüssen! <br>
+  Manchmal war ein schönes Gedicht,  oder ein schönes Foto drin ein anderes mal einige positive Gedanken oder eine Zeichnung . <br>
+  Wir hatten jedesmal Freude an der Post von ihr! <br>
+  Mit dem QR Code auf dem Schlüsselanhänger kannst Du dir täglich einen solchen digitalen Aufsteller anschauen!
+  </p>
+ <p>
+   <button id="botao-ler-mais" onclick="mostrarMais()" style="margin-top: 1rem;">
+    Weiterlesen
+  </button>
+   <button id="botao-fechar" onclick="fecharTexto()" style="
+      margin-top: 1rem;
+      padding: 8px 18px;
+      background-color: #999;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+    ">
+      Schließen
+</div>
+
+ <div style="margin-top: 90vh; padding: 1rem; background: rgba(255,255,255,0.9); text-align: center; border-radius: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+
+    <p>
+      Vielleicht möchtest du jemandem genau das schenken.  
+      Einen Moment der Freude. Ein tägliches Lächeln.
+    </p>
+
+    <p style="margin-top: 2em;">
+      Möchtest du auch ein Geschenk mit Bedeutung und Emotion weiterschenken?
+    </p>
+
+    <p style="margin-top: 2em;">
+      Du willst auch ein Geschenk mit Bedeutung und Emotion machen?
+    </p>
+
+    <div style="margin-top: 2em;">
+      <a href="https://www.valeriavontobel.ch/" class="button" style="
+        padding: 12px 24px;
+        background-color: #c75b7c;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+      ">
+        👉 Hier klicken
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMais() {
+      document.getElementById('texto-completo').style.display = 'block';
+      document.getElementById('botao-ler-mais').style.display = 'none';
+      document.getElementById('botao-fechar').style.display = 'inline-block';
+    }
+
+    function fecharTexto() {
+      document.getElementById('texto-completo').style.display = 'none';
+      document.getElementById('botao-ler-mais').style.display = 'inline-block';
+      document.getElementById('botao-fechar').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
