@@ -69,7 +69,7 @@ img {
 #imagem {
  display: flex;
   margin: 6rem auto; /* isso centraliza horizontalmente */
-  max-width: 60%;
+  max-width: 600%;
   transition: opacity 1s ease-in-out;
   
 }
