@@ -32,7 +32,7 @@
     const diaValido = tag <= totalDias ? tag : (tag % totalDias || 1);
     const caminhoImagem = `imagem/galerie/${diaValido}dia.jpeg`;
 
-    const imagem = document.getElementById('bild');
+    const imagem = document.getElementById('imagem');
     imagem.src = caminhoImagem;
 
     // Se não houver imagem, apenas esconde
