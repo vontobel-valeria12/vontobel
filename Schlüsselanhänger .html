@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="styles.css/styless.css"/>
+    <link rel="icon" href="imagem/ico/logo.jpg" type="image/x-icon">
+  <title>Schlüsselanhänger mit täglichen Botschaften</title>
+  
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"><a href="index.html">home</a></div>
+      <div class="menu">
+        <a href="funktionen">Funktionen</a>
+        <a href="themen">Themen</a>
+        <a href="faq">FAQ</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+   <section class="slider">
+    <div class="slides" id="slideContainer">
+      <img src="imagem/chaveiro/maca.jpg" alt="Pintura 1" />
+      <img src="imagem/chaveiro/fe1.jpg" alt="Pintura 2" />
+      <img src="imagem/chaveiro/ovelhas.jpg" alt="Pintura 3" />
+    </div>
+    <div class="nav-buttons">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </section>
+
+   <div class="slider-center-text">
+    <h1>Schlüsselanhänger mit täglichen Botschaften</h1>
+  </div>
+
+  <main class="container">
+    <section id="funktionen">
+      <h2>🧡 Warum dieses Geschenk besonders ist</h2>
+      <p>Ein kleine Aufmerksamkeit, die jeden Tag im Jahr für Freude sorgt – mit 30 liebevoll gestalteten Botschaften pro Monat.</p>
+      <h2>🔍 So funktioniert es</h2>
+      <ul>
+        <li>Thema wählen</li>
+        <li>Schlüsselanhänger mit themenspezifischem QR-Code erhalten</li>
+        <li>Jeden Tag eine neue Botschaft sehen</li>
+        <li>Automatische monatliche Erneuerung – ein ganzes Jahr lang</li>
+      </ul>
+    </section>
+
+    <section id="themen">
+      <h2>✨ Themen zur Auswahl</h2>
+      <div class="themes">
+        <div class="theme">💖 Romantische Liebe</div>
+        <div class="theme">💫 Sternzeichen</div>
+        <div class="theme">🙏 Glaube</div>
+        <div class="theme">🌞 Positivität</div>
+        <div class="theme">😂 Humor</div>
+        <div class="theme">💪 Abnehmen</div>
+        <div class="theme">🤝 Freundschaft (inkl. Geburtstagsbotschaft)</div>
+      </div>
+    </section>
+
+    <section>
+      <p class="price">CHF 10.00 pro Stück<br />Gratis-Lieferung in Weinfelden<br />Rabatte ab 5 Stück möglich</p>
+    </section>
+
+    <section class="cta" id="kontakt">
+      <p>📲 Jetzt per WhatsApp bestellen:</p>
+      <a href="https://api.whatsapp.com/send?phone=41765019056&text=Hallo%2C%20ich%20möchte%20bitte%20mehr%20informationen" target="_blank">Jetzt anfragen</a>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>❓ Häufige Fragen</h2>
+      <p><strong>Sind die Botschaften bei jedem Schlüsselanhänger unterschiedlich?</strong><br>Ja – jedes Thema hat seine eigene Botschaftsreihe.</p>
+      <p><strong>Gibt es individuelle QR‑Codes?</strong><br>Nein – alle Schlüsselanhänger des gleichen Themas teilen denselben QR‑Code.</p>
+      <p><strong>Hören die Botschaften nach 30 Tagen auf?</strong><br>Nein – es geht automatisch jeden Monat weiter.</p>
+      <p><strong>Enthält das Freundschafts‑Thema eine Geburtstagsbotschaft?</strong><br>Ja – eine liebevolle Überraschung zum Ehrentag ist inklusive.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
+
+ <script>
+    const slides = document.getElementById("slideContainer");
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() { showSlide(index + 1); }
+    function prevSlide() { showSlide(index - 1); }
+
+    setInterval(() => { nextSlide(); }, 4000);
+  </script>
+
+</body>
+</html>
