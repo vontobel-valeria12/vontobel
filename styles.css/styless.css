@@ -1,0 +1,163 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #c9a327;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav .menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nav-buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+}
+
+.nav-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 1rem;
+}
+
+
+
+.slider-center-text {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4); /* sombra atrás do texto */
+  border-radius: 10px;
+}
+
+.slider-center-text h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+h2 { color: #141414; 
+    margin-bottom: 1rem;
+ }
+
+.themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.theme {
+  background: #ecece0;
+  padding: 1rem;
+  border-left: 4px solid #161516;
+  border-radius: 4px;
+}
+
+ul { margin: 1rem 0 2rem 1.2rem; }
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #101111;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  background: #21c40c;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+}
+
+.cta a {
+  background: white;
+  color: #181616;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.faq {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .nav-buttons button {
+    font-size: 1.5rem;
+  }
+}
