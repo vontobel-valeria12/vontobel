@@ -11,7 +11,7 @@ body {
   justify-content: center; /* centraliza verticalmente */
   align-items: center;     /* centraliza horizontalmente */
   height: 100vh;
-  background-image: url('novofundo8.jpeg');
+  background-image: url('fundo.jpeg');
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
