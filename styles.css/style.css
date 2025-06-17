@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: center; /* centraliza verticalmente */
   align-items: center;     /* centraliza horizontalmente */
-  height: 100vh;
+  height: 80vh;
   background-image: url('fundo.png');
   background-size: auto;
   background-repeat: no-repeat;
