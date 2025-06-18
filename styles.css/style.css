@@ -108,9 +108,10 @@
     height: auto;
   }
 }
+
 #container {
   position: flex;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, 0);
    width: 80%;
@@ -142,6 +143,12 @@
   background-color: #a94a66;
 }
 
+.fundo {
+  width: 100%;
+  display: block;
+}
+
+
 .container {
   position: relative;
   width: 100%;
@@ -149,14 +156,9 @@
   margin: 0 auto;
 }
 
-.fundo {
-  width: 100%;
-  display: block;
-}
-
 .mensagem {
   position: absolute;
-  top: 48%; 
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
@@ -166,29 +168,26 @@
   font-weight: 500;
   line-height: 1.4;
 }
- .saiba-mais {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
 
- .saiba-mais a {
-      background-color: #007BFF;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
+.saiba-mais {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  position: relative; /* Isso ajuda a manter ele no fluxo abaixo */
+}
+
+.saiba-mais a {
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .mensagem {
     font-size: 1rem;
     width: 80%;
   }
-
-  .saiba-mais a {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-}
