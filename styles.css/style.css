@@ -12,7 +12,7 @@
   align-items: center;      
   height: 80vh;
   background-image: url('fundo.png');
-  background-size: auto;
+  background-size: flex;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -57,24 +57,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 99
 }
 
-.img {
-  max-width: 30%;
-  height: auto;
-  display: block;
-  margin: 30px auto 10px auto;;
-}
-
-
-#imagem {
- display: flex;
-  margin: 6rem auto; /* isso centraliza horizontalmente */
-  max-width: 35%;
-  transition: opacity 1s ease-in-out;
-  
-}
 
 #info {
     margin: 10vh;
@@ -102,12 +87,7 @@
 }
 
 
-@media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
+
 
 #container {
   position: flex;
@@ -142,12 +122,6 @@
 #botao-ler-mais:hover {
   background-color: #a94a66;
 }
-
-.fundo {
-  width: 100%;
-  display: block;
-}
-
 
 .container {
   position: relative;
