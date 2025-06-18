@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #b8a99b;;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 400px;
-  height: 500px;
+  max-width: 40vw ;
+  height: 70vw;
   background-image: url('fundo.jpeg'); /* use o caminho certo */
   background-size: cover;
   background-position: center;
