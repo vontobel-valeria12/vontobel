@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css/style.css">
+    <link rel="icon" href="imagem/ico/logo.jpg" type="image/x-icon">
+    <title>Deine Botschaft des Tages</title>
+</head>
+<body>
+
+   <div class="container">
+    <img class="fundo" src="imagem/fundo.png" alt="Caneca">
+    <div class="mensagem" id="mensagemDoDia">
+    </div>
+    <div class="saiba-mais">
+      <a href="füreuch.html">Erfahre mehr</a>
+    </div>
+
+  </div>
+
+  <!-- Primeiro carrega as mensagens -->
+  <script src="mensagens.js"></script>
+
+  <!-- Depois executa o script que usa essas mensagens -->
+  <script>
+    const data = new Date();
+    const diaDoAno = Math.floor((data - new Date(data.getFullYear(), 0, 0)) / 86400000);
+    const mensagem = mensagens[diaDoAno % mensagens.length];
+    document.getElementById("mensagemDoDia").textContent = mensagem;
+  </script>
+
+<script src="mensagens.js"></script>
+
+    
+</body>
+</html>
