@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 70vw ;
+  max-width: 190vw ;
   height: 90vw;
   background-image: url('fundo.jpeg'); /* use o caminho certo */
   background-size: cover;
