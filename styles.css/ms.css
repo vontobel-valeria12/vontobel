@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-gallery {
+  flex: 1 1 40%;
+}
+
+.product-gallery img {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gallery-thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.product-info {
+  flex: 1 1 50%;
+}
+
+.product-info h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #e60000;
+  margin: 1rem 0;
+}
+
+.product-description {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+}
+
+input[type="number"] {
+  padding: 0.5rem;
+  width: 80px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.add-to-cart {
+  background: #25d366;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-to-cart:hover {
+  background: #1ca750;
+}
+
+.add-to-wishlist {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delivery {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.product-specs {
+  margin-top: 3rem;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabs li {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.specs-content p {
+  margin: 0.5rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #eee;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+  }
+}

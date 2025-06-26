@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+/* --- TOPO FIXO --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #c9a327;
+  z-index: 1000;
+}
+
+.top-header {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  padding: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #070be7;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  margin: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #4f5ee6;
+  border: none;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.actions a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.slider-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(196, 41, 41);
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.slider-center-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #0099ff;
+}
+
+/* --- SLIDER --- */
+.fade-slider {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.qrcode {
+  object-fit: contain; /* mostra tudo, sem cortar */
+  background: white; /* se tiver fundo transparente */
+}
+
+.slide.showing {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  color: #141414;
+  margin-bottom: 1rem;
+}
+
+/* --- TEMAS --- */
+.themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.theme {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  color: black;
+  transition: 0.3s;
+  border: none;
+}
+
+.theme:hover {
+  background-color: #ddd;
+}
+#so-funktioniert-es ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+#so-funktioniert-es li {
+  margin-bottom: 0.5rem;
+}
+
+.einsatzmöglichkeiten {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #101111;
+  margin-top: 1rem;
+}
+
+
+/* --- WHATSAPP --- */
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* --- PREÇO --- */
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #101111;
+  margin-bottom: 1rem;
+}
+
+/* --- CHAMADA PRA AÇÃO --- */
+.cta {
+  background: #21c40c;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+}
+
+.cta a {
+  background: white;
+  color: #181616;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* --- FAQ --- */
+.faq {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 4rem;
+}
+
+/* --- RODAPÉ --- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .fade-slider {
+  height: 180px;
+}
+
+.slide {
+  height: 180px;
+}
+
+
+  .slider-buttons button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .nav-buttons button {
+    font-size: 1.5rem;
+  }
+}
