@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schlüsselanhänger</title>
+  <link rel="stylesheet" href="styles.css/txt.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="imagem/capa/ico/logo.jpg" alt="Logo Glaube"/>
+        <h1>Schlüsselanhänger</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Startseite</a>
+        <a href="loja.html">Produkte</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container">
+  <div class="product-details">
+    <div class="product-gallery">
+      <img src="bilder/chlüsselanhängerrund.jpg" alt="Schlüsselanhänger mit Botschaft" />
+      <div class="gallery-thumbnails">
+        <img src="bilder/chlüsselanhängerrund.jpg" alt="Detailansicht 1" />
+        <img src="bilder/herz.jpg" alt="Detailansicht 2" />
+        <img src="bilder/schlüssenhägerx1920.jpg" alt="detailansicht" />
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="product-path">
+        <i class="fas fa-chevron-right"></i> Geschenkideen / Schlüsselanhänger / 
+      </p>
+      <h2>Schlüsselanhänger </h2>
+      <p class="product-code">Artikelnummer: CH5147</p>
+      <p class="price"> ab CHF 8.00</p>
+      <p class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 32 Bewertungen
+      </p>
+      <p class="product-description">
+       Dieser Schlüsselanhänger für Beidseitigen Druck <br> 
+        Eine stärkende Inspiration für jeden Tag – zum Verschenken oder für sich selbst.
+      </p>
+
+      <!-- ✅ Botões corretamente dentro da product-info -->
+      <div class="buttons">
+        <a href="https://api.whatsapp.com/send?phone=41765019056&text=Hallo!%20Ich%20möchte%20den%20Schlüsselanhänger%20Beidseitig%20bestellen."
+           class="whatsapp-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Bestellung via WhatsApp
+        </a>
+
+        <button class="add-to-wishlist">
+          <i class="fas fa-heart"></i> Zur Wunschliste
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Especificações -->
+   <div class="product-specs">
+  <ul class="tabs">
+    <li class="active" onclick="mostrarAba('details')"><i class="fas fa-info-circle"></i> Details</li>
+    <li onclick="mostrarAba('faq')"><i class="fas fa-question-circle"></i> Häufige Fragen</li>
+    <li onclick="mostrarAba('zahlung')"><i class="fas fa-credit-card"></i> Zahlungsarten</li>
+  </ul>
+
+  <div class="specs-content" id="details">
+    <p><strong>Material:</strong> Holz</p>
+      <p><strong>Bedruckbar:</strong> Beidseitig</p>
+      <p><strong>Maße:</strong> ca. 5cm x 5cm</p>
+    </div>
+    
+
+  <div class="specs-content" id="faq" style="display: none;">
+    <p><strong>Bedruckbar</strong> beidseitig</p>
+        </div>
+
+  <div class="specs-content" id="zahlung" style="display: none;">
+    <p><strong>Zahlungsarten:</strong></p>
+    <ul>
+      <li>✔️ Twint</li>
+      <li>✔️ Banküberweisung</li>
+      <li>✔️ Barzahlung bei Abholung</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+ 
+    
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('.gallery-thumbnails img');
+    const mainImage = document.querySelector('.product-gallery img');
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        mainImage.src = thumbnail.src;
+      });
+    });
+
+    const whatsappBtn = document.querySelector('.whatsapp-button');
+
+    if (whatsappBtn) {
+      whatsappBtn.addEventListener('click', () => {
+        const quantity = document.getElementById('quantity')?.value || 1;
+        console.log(`WhatsApp Bestellung mit Menge: ${quantity}`);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+  <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
+
+</body>
+</html>

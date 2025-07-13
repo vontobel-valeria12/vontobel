@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💖Keramik-Mottotasse</title>
+  <link rel="stylesheet" href="styles.css/txt.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="imagem/capa/ico/logo.jpg" alt="Logo Glaube"/>
+        <h1>Tasse</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Startseite</a>
+        <a href="loja.html">Produkte</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+  <div class="product-details">
+    <div class="product-gallery">
+      <img src="imagem/Tasse/teman.jpg" alt="Schlüsselanhänger mit Botschaft" />
+      <div class="gallery-thumbnails">
+        <img src="imagem/Tasse/teman.jpg" alt="Detailansicht 1" />
+        <img src="imagem/Tasse/temen1.jpg" alt="Detailansicht 2" />
+        <img src="imagem/Tasse/temen2.jpg" alt="QR Code" />
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="product-path">
+        <i class="fas fa-chevron-right"></i> Geschenkideen / Tasse / Mottotasse
+      </p>
+      <h2>💖Keramik-Mottotasse</h2>
+      <p class="product-code">Artikelnummer:1015</p>
+      <p class="price"> CHF 25.00</p>
+      <p class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 74 Bewertungen
+      </p>
+      <p class="product-description">
+       <h3>Keramik-Mottotasse 11oz weiß, mit Innendruck</h3>
+    <p>Sag’s durch die Tasse…! Unsere sublimierbaren Thementassen bringen schon eine Botschaft frei Haus mit:<br>
+         Neben einem wunderschön bedruckten Inneren kommen die Tassen zudem bereits von uns mit einem verzierten Henkel daher.<br>
+Der Pop-Art Stil mit seinen knalligen Farben ist wieder voll im Trend.<br>
+Die individuellen Fotos oder persönlichen Motive, welche auf der Außenfläche platziert werden können, werden durch die Botschaft im Inneren noch ausdrucksstärker.<br>
+Ob zum Geburtstag, zum Valentinstag, zu Weihnachten oder als besonderes Dankeschön – hier braucht es nicht viele Worte, um große Gefühle auszudrücken!<br></p>
+  </section>
+      </p>
+
+      <!-- ✅ Botões corretamente dentro da product-info -->
+      <div class="buttons">
+        <a href="https://api.whatsapp.com/send?phone=41765019056&text=Hallo!%20Ich%20möchte%20der%20tasse%20Farbwechseltasse%20bestellen."
+           class="whatsapp-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Bestellung via WhatsApp
+        </a>
+
+        <button class="add-to-wishlist">
+          <i class="fas fa-heart"></i> Zur Wunschliste
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Especificações -->
+  <div class="product-specs">
+  <ul class="tabs">
+    <li class="active" onclick="mostrarAba('details')"><i class="fas fa-info-circle"></i> Details</li>
+    <li onclick="mostrarAba('faq')"><i class="fas fa-question-circle"></i> Häufige Fragen</li>
+    <li onclick="mostrarAba('zahlung')"><i class="fas fa-credit-card"></i> Zahlungsarten</li>
+  </ul>
+
+  <div class="specs-content" id="details">
+    <p><strong>Material:</strong> Hochwertige Keramik</p>
+    <p><strong>Kapazität:</strong> 330 ml</p>
+    <p><strong>Maße:</strong> 9,5 cm hoch, 8 cm Durchmesser</p>
+    <p><strong>Gewicht:</strong> ca. 330 g</p>
+   <p><strong>Reinigung:</strong>Spülmaschinengeeignet</p>
+  </div>
+
+  <div class="specs-content" id="faq" style="display: none;">
+    <p><strong>Keramiktasse mit C-förmigem Henkel mit Innendruck
+und mit original Orca Beschichtung</strong></p>
+
+    <p><strong>Spülmaschinengeeignet</strong><br>
+        </p>
+        </div>
+   
+  <div class="specs-content" id="zahlung" style="display: none;">
+    <p><strong>Zahlungsarten:</strong></p>
+    <ul>
+      <li>✔️ Twint</li>
+      <li>✔️ Banküberweisung</li>
+      <li>✔️ Barzahlung bei Abholung</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+
+ <script>
+  function mostrarAba(id) {
+  const abas = document.querySelectorAll('.specs-content');
+  const botoes = document.querySelectorAll('.tabs li');
+
+  abas.forEach(el => el.style.display = 'none');
+  botoes.forEach(el => el.classList.remove('active'));
+
+  document.getElementById(id).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const thumbnails = document.querySelectorAll('.gallery-thumbnails img');
+  const mainImage = document.querySelector('.product-gallery img');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      mainImage.src = thumbnail.src;
+    });
+  });
+
+  const whatsappBtn = document.querySelector('.whatsapp-button');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', () => {
+      const quantity = document.getElementById('quantity')?.value || 1;
+      console.log(`WhatsApp Bestellung mit Menge: ${quantity}`);
+    });
+  }
+});
+
+</script>
+
+</body>
+</html>
+
+
+  <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
+
+</body>
+</html>

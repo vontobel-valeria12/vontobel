@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="styles.css/styless.css"/>
+    <link rel="icon" href="imagem/ico/logo.jpg" type="image/x-icon">
+  <title>Schlüsselanhänger mit täglichen Botschaften</title>
+  
+</head>
+<body>
+  <header class="top-header">
+  <div class="topbar">
+    <a href="index.html" class="logo">Deine Botschaft</a>
+
+    <form class="search-bar">
+      <input type="text" placeholder="Suche nach Themen oder Geschenken..." />
+      <button type="submit">🔍</button>
+    </form>
+
+    <div class="actions">
+      <a href="kontakt.html">📞 Kontakt</a>
+      <a href="https://api.whatsapp.com/send?phone=41765019056">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <a href="#funktionen">Funktionen</a>
+    <a href="#themen">Themen</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+<div style="height: 100px;"></div>
+
+<section class="produto-slider">
+  <div class="fade-slider">
+    <img class="slide qrcode" src="imagem/Tasse/WhatsApp Bild 2025-06-12 um 21.07.58_172ea1fc.jpg" alt="Produto1" >
+    <img class="slide qrcode" src="imagem/Tasse/WhatsApp Bild 2025-06-12 um 21.07.59_3715c820.jpg" alt="Produto 2">
+    <img class="slide qrcode" src="imagem/Tasse/WhatsApp Bild 2025-06-12 um 21.08.19_ee742aca.jpg" alt="Produto 3">
+      
+
+  </div>
+
+  <div class="slider-buttons">
+    <button onclick="mudarSlide(-1)">❮</button>
+    <button onclick="mudarSlide(1)">❯</button>
+  </div>
+</section>
+
+  </header>
+
+ <div class="slider-center-text">
+  <h1>Tasse mit QR Code – Unser schönster Moment</h1>
+</div>
+
+ 
+   <main class="container">
+    
+
+   <section id="idee">
+    <h2>💖 Ein Geschenk, das Erinnerungen lebendig macht</h2>
+    <p>Jede Tasse enthält einen personalisierten QR-Code, der zu einer privaten Seite mit <strong>Fotos, Botschaften oder einem besonderen Moment</strong> führt – ideal für Paare, beste Freunde oder Familienmitglieder.</p>
+  </section>
+
+  
+  <section id="so-funktioniert-es">
+  <h2>🔍 So funktioniert es</h2>
+  <ul>
+    <li>Wählen Sie ein Foto oder mehrere besondere Bilder</li>
+    <li>Wir gestalten Ihre Tasse mit einem QR-Code</li>
+    <li>Der QR-Code führt zu einer privaten Seite mit Ihren Bildern und Texten</li>
+    <li>Ein Geschenk, das jedes Mal beim Kaffeetrinken überrascht 💕</li>
+  </ul>
+
+  <p class="einsatzmöglichkeiten">
+    ✨ Geeignet für: 💑 Paare • 👯‍♀️ Beste Freunde • 👨‍👩‍👧‍👦 Familien • 🎂 Geburtstage • 👼 Erinnerungen
+  </p>
+   <a href="produto.html" style="text-decoration: none; color: inherit;">
+              <div style="width: 300px;">
+                <img src="imagem/Tasse/WhatsApp Bild 2025-06-12 um 21.07.58_172ea1fc.jpg" alt="Personalisierte Geschenke" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <div style="margin-top: 10px; background-color: #f8f8f8; color: #333; padding: 10px 15px; border-radius: 8px;">
+                  Personalisierte Tasse Qr-Code
+                </div>
+              </div>
+            </a>
+
+  <p class="price">
+   
+    inkl. QR-Code & privater Fotoseite
+  </p>
+</section>
+
+ 
+
+ 
+  <section class="faq" id="faq">
+    <h2>❓ Häufige Fragen</h2>
+    <p><strong>Was passiert, wenn jemand den QR-Code scannt?</strong><br>Die Person sieht eine private Seite mit bis zu 10 Fotos und einer persönlichen Nachricht.</p>
+    <p><strong>Kann ich die Fotos später ändern?</strong><br>Ja, auf Wunsch kann die Galerie nachträglich aktualisiert werden.</p>
+    <p><strong>Wie lange bleibt die Seite aktiv?</strong><br>Die Seite bleibt mindestens 1 Jahr online – mit der Möglichkeit zu verlängern.</p>
+    <p><strong>Kann ich die Caneca mit einer Geschenkverpackung erhalten?</strong><br>Ja – Geschenkoptionen sind gegen Aufpreis verfügbar.</p>
+  </section>
+
+</main>
+
+
+</body>
+ <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
+
+ <script>
+      function mostrarTema(id) {
+    const temas = document.querySelectorAll('.tema-detalhe');
+    temas.forEach(t => t.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 80, behavior: 'smooth' });
+  }
+   
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("showing");
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].classList.add("showing");
+  setTimeout(showSlides, 4000);
+}
+  </script>
+
+</body>
+</html>

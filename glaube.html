@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glaube – Schlüsselanhänger mit Botschaft</title>
+  <link rel="stylesheet" href="styles.css/txt.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="imagem/capa/ico/logo.jpg" alt="Logo Glaube"/>
+        <h1>Glaube</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Startseite</a>
+        <a href="loja.html">Produkte</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container">
+  <div class="product-details">
+    <div class="product-gallery">
+      <img src="imagem/chaveiro/img1.jpeg" alt="Schlüsselanhänger mit Botschaft" />
+      <div class="gallery-thumbnails">
+        <img src="imagem/chaveiro/img1.jpeg" alt="Detailansicht 1" />
+        <img src="imagem/chaveiro/ovelhachaveiro.jpeg" alt="Detailansicht 2" />
+        <img src="imagem/chaveiro/qrcode1.jpeg" alt="QR Code" />
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="product-path">
+        <i class="fas fa-chevron-right"></i> Geschenkideen / Schlüsselanhänger / Glaube
+      </p>
+      <h2>Schlüsselanhänger mit täglicher botschaf des Glaubens</h2>
+      <p class="product-code">Artikelnummer: Glaubens</p>
+      <p class="price">CHF 15.00</p>
+      <p class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 32 Bewertungen
+      </p>
+      <p class="product-description">
+       Dieser Schlüsselanhänger enthält einen QR-Code, <br> der täglich eine neue Botschaft des Glaubens zeigt. <br> 
+        Eine stärkende Inspiration für jeden Tag – zum Verschenken oder für sich selbst.
+
+      </p>
+
+      <!-- ✅ Botões corretamente dentro da product-info -->
+      <div class="buttons">
+        <a href="https://api.whatsapp.com/send?phone=41765019056&text=Hallo!%20Ich%20möchte%20den%20Schlüsselanhänger%20Glaube%20bestellen."
+           class="whatsapp-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Bestellung via WhatsApp
+        </a>
+
+        <button class="add-to-wishlist">
+          <i class="fas fa-heart"></i> Zur Wunschliste
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Especificações -->
+  <div class="product-specs">
+    <ul class="tabs">
+      <li><i class="fas fa-info-circle"></i> Details</li>
+    </ul>
+    <div class="specs-content">
+      <p><strong>Material:</strong> Metallschlüsselanhänger</p>
+      <p><strong>QR-Code:</strong> Täglicher Glaube</p>
+      <p><strong>Maße:</strong> ca. 4cm x 4cm</p>
+      <p><strong>Sprache:</strong> Deutsch (Standard), auf Anfrage auch Portugiesisch</p>
+    </div>
+  </div>
+</main>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('.gallery-thumbnails img');
+    const mainImage = document.querySelector('.product-gallery img');
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        mainImage.src = thumbnail.src;
+      });
+    });
+
+    const whatsappBtn = document.querySelector('.whatsapp-button');
+
+    if (whatsappBtn) {
+      whatsappBtn.addEventListener('click', () => {
+        const quantity = document.getElementById('quantity')?.value || 1;
+        console.log(`WhatsApp Bestellung mit Menge: ${quantity}`);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+  <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
+
+</body>
+</html>
