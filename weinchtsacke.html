@@ -1,233 +1,122 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihr Premium Buch</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weihnachtskugel </title>
+  <link rel="stylesheet" href="styles.css/txt.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Ihr Premium Buch</h1>
-        <img src="capa.jpg" alt="Buchcover" class="cover">
-        <p>Blättern Sie interaktiv durch das Buch oder wählen Sie direkt eine Seite aus:</p>
-
-        <div class="viewer-container">
-            <div class="thumbnails" id="thumbnails"></div>
-            <div class="pdf-viewer">
-                <canvas id="pdf-render"></canvas>
-                <div class="controls">
-                    <button id="prev-page">← Vorherige Seite</button>
-                    <span>Seite: <span id="page-num">1</span> / <span id="page-count">?</span></span>
-                    <button id="next-page">Nächste Seite →</button>
-                </div>
-            </div>
-        </div>
-
-        <button id="downloadBtn">Buch herunterladen</button>
-        <p id="thankYou" class="hidden">Vielen Dank! Ihr Download startet in Kürze...</p>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="imagem/capa/ico/logo.jpg" alt="Weihnachtenskugel"/>
+        <h1>Weinachtsake</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Startseite</a>
+        <a href="loja.html">Produkte</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+  <div class="product-details">
+    <div class="product-gallery">
+      <img src="imagem/produto/bolla.jpeg" alt="Weinachtsakel" />
+      <div class="gallery-thumbnails">
+        <img src="imagem/produto/bolla.jpeg" alt="Weinachtskugel " />
+        <img src="imagem/produto/natalbola.jpeg" alt="" />Weinachtsakel 
+      </div>
     </div>
 
-    <script src="pdf.js"></script>
-    <script src="pdf.worker.js"></script>
-    <script src="script.js"></script>
+    <div class="product-info">
+      <p class="product-path">
+        <i class="fas fa-chevron-right"></i> personalisierter Weihnachtsake
+      </p>
+      <h2>Weinachtskugel</h2>
+      <p class="product-code">Artikelnummer: Weinachtskugel</p>
+      <p class="price">CHF 15,-</p>
+      <p class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
+      </p>
+      <p class="product-description">
+       <h2>💖 Weinachtsake</h2>
+    <p> <strong></strong></p>
+  </section>
+      </p>
+
+      
+      <div class="buttons">
+        <a href="https://api.whatsapp.com/send?phone=41765019056&text=Hallo!%20Ich%20bin"
+           class="whatsapp-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Bestellung via WhatsApp
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="product-specs">
+  <ul class="tabs">
+    <li onclick="mostrarAba('zahlung')"><i class="fas fa-credit-card"></i> Zahlungsarten</li>
+  </ul>
+
+  <div class="specs-content" id="zahlung" style="display: none;">
+    <p><strong>Zahlungsarten:</strong></p>
+    <ul>
+      <li>✔️ Twint</li>
+      <li>✔️ Banküberweisung</li>
+      <li>✔️ Barzahlung bei Abholung</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+
+ <script>
+  function mostrarAba(id) {
+  const abas = document.querySelectorAll('.specs-content');
+  const botoes = document.querySelectorAll('.tabs li');
+
+  abas.forEach(el => el.style.display = 'none');
+  botoes.forEach(el => el.classList.remove('active'));
+
+  document.getElementById(id).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const thumbnails = document.querySelectorAll('.gallery-thumbnails img');
+  const mainImage = document.querySelector('.product-gallery img');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      mainImage.src = thumbnail.src;
+    });
+  });
+
+  const whatsappBtn = document.querySelector('.whatsapp-button');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', () => {
+      const quantity = document.getElementById('quantity')?.value || 1;
+      console.log(`WhatsApp Bestellung mit Menge: ${quantity}`);
+    });
+  }
+});
+
+</script>
+
 </body>
 </html>
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-}
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    max-width: 900px;
-    width: 100%;
-}
 
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
+  <footer>
+    © 2025 • Alle Rechte vorbehalten.
+  </footer>
 
-.cover {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.viewer-container {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.thumbnails {
-    max-width: 120px;
-    overflow-y: auto;
-    height: 400px;
-    border-right: 1px solid #ccc;
-}
-
-.thumbnails img {
-    width: 100%;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.thumbnails img:hover {
-    border-color: #007BFF;
-}
-
-.pdf-viewer {
-    flex: 1;
-}
-
-canvas {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.controls {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.hidden {
-    display: none;
-}
-
-#thankYou {
-    margin-top: 15px;
-    font-size: 14px;
-    color: green;
-}
-
-const url = 'buch.pdf';
-let pdfDoc = null,
-    pageNum = 1,
-    pageRendering = false,
-    pageNumPending = null;
-const scale = 1.2;
-const canvas = document.getElementById('pdf-render');
-const ctx = canvas.getContext('2d');
-const thumbnailsDiv = document.getElementById('thumbnails');
-
-// PDF laden
-pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
-    pdfDoc = pdfDoc_;
-    document.getElementById('page-count').textContent = pdfDoc.numPages;
-    renderPage(pageNum);
-    renderThumbnails();
-});
-
-// Seite rendern
-function renderPage(num) {
-    pageRendering = true;
-    pdfDoc.getPage(num).then(page => {
-        const viewport = page.getViewport({ scale: scale });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        const renderCtx = { canvasContext: ctx, viewport: viewport };
-        const renderTask = page.render(renderCtx);
-
-        renderTask.promise.then(() => {
-            pageRendering = false;
-            document.getElementById('page-num').textContent = num;
-
-            if (pageNumPending !== null) {
-                renderPage(pageNumPending);
-                pageNumPending = null;
-            }
-        });
-    });
-}
-
-function queueRenderPage(num) {
-    if (pageRendering) {
-        pageNumPending = num;
-    } else {
-        renderPage(num);
-    }
-}
-
-// Navigation
-document.getElementById('prev-page').addEventListener('click', () => {
-    if (pageNum <= 1) return;
-    pageNum--;
-    queueRenderPage(pageNum);
-});
-
-document.getElementById('next-page').addEventListener('click', () => {
-    if (pageNum >= pdfDoc.numPages) return;
-    pageNum++;
-    queueRenderPage(pageNum);
-});
-
-// Miniaturas rendern
-function renderThumbnails() {
-    for (let i = 1; i <= pdfDoc.numPages; i++) {
-        pdfDoc.getPage(i).then(page => {
-            const viewport = page.getViewport({ scale: 0.2 });
-            const thumbCanvas = document.createElement('canvas');
-            const thumbCtx = thumbCanvas.getContext('2d');
-            thumbCanvas.width = viewport.width;
-            thumbCanvas.height = viewport.height;
-            page.render({ canvasContext: thumbCtx, viewport: viewport }).promise.then(() => {
-                thumbCanvas.addEventListener('click', () => {
-                    pageNum = i;
-                    queueRenderPage(pageNum);
-                });
-                thumbnailsDiv.appendChild(thumbCanvas);
-            });
-        });
-    }
-}
-
-// Download
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'MeinBuch.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    const thankYouMsg = document.getElementById('thankYou');
-    thankYouMsg.classList.remove('hidden');
-});
+</body>
+</html>
