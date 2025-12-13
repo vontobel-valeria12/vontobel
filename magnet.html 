@@ -24,10 +24,10 @@
   <main class="container">
   <div class="product-details">
     <div class="product-gallery">
-      <img src="imagem/produto/rotina da criança.jpeg" alt="Magnet "/>
+          <img src="imagem/produto/rotina da crianca.jpg" alt="Magnet">
       <div class="gallery-thumbnails">
-        <img src="imagem/produto/rotina da crianca.jpg" alt="Magnet">
-        <img src="bilder/avental.jpg"alt="Magnet"/>
+            <img src="imagem/produto/rotina da crianca.jpg" alt="Magnet">
+        
       </div>
     </div>
 
