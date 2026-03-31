@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 importScripts('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs');
 importScripts('https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix');
 
