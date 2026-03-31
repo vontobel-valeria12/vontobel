@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68c8af84.css",
+    "main.js": "/static/js/main.1101e7e4.js",
+    "static/media/BAA10-AH-_web_01.jpg": "/static/media/BAA10-AH-_web_01.64128c7067fcc35db862.jpg",
+    "static/media/07.jpeg": "/static/media/07.4df71ab9241ea2429b30.jpeg",
+    "static/media/body.jpg": "/static/media/body.d1881836c713b2c19ef6.jpg",
+    "static/media/14.jpeg": "/static/media/14.cc1da66f24200c60d9ab.jpeg",
+    "static/media/carteira.jpg": "/static/media/carteira.19d48cb74bc50792c574.jpg",
+    "static/media/06.jpeg": "/static/media/06.e43649db34bf95049d88.jpeg",
+    "static/media/garafa.jpg": "/static/media/garafa.e5606ca64ecae6bb412c.jpg",
+    "static/media/tasche.jpg": "/static/media/tasche.8c6c41a1daf5767aa4dc.jpg",
+    "static/media/avental.jpg": "/static/media/avental.c8050d2ca68a632464b6.jpg",
+    "static/media/mini.jpg": "/static/media/mini.5be6444b4ecd7fd6c8af.jpg",
+    "static/media/1774707180412.webp": "/static/media/1774707180412.9058679e30a148459fc5.webp",
+    "static/media/15.jpeg": "/static/media/15.05b427572e71c0893dd1.jpeg",
+    "static/media/BackgroundEraser_20260328_144131561.webp": "/static/media/BackgroundEraser_20260328_144131561.1870f33a62b5d76ae428.webp",
+    "static/media/bolsa.jpeg": "/static/media/bolsa.45b8fbe2a71f0f2e38e1.jpeg",
+    "static/media/BackgroundEraser_20260328_082454511.webp": "/static/media/BackgroundEraser_20260328_082454511.34fa989e53d6e0fc9d44.webp",
+    "static/media/BackgroundEraser_20260328_145935914.webp": "/static/media/BackgroundEraser_20260328_145935914.f4500d15fb4509befaa2.webp",
+    "static/media/Losmetiklaschen.jpg": "/static/media/Losmetiklaschen.c51599b1114de165fa59.jpg",
+    "static/media/chaveiromercadoficha.jpg": "/static/media/chaveiromercadoficha.402c14a8eb6e5281691f.jpg",
+    "static/media/22.jpeg": "/static/media/22.9793fa9760f7ff74fa09.jpeg",
+    "static/media/21.jpeg": "/static/media/21.8d76935b4c3b5c5f2f32.jpeg",
+    "static/media/BackgroundEraser_20260328_100302160.webp": "/static/media/BackgroundEraser_20260328_100302160.f51a6cf4e584d7f4df95.webp",
+    "static/media/BackgroundEraser_20260328_093522655.webp": "/static/media/BackgroundEraser_20260328_093522655.420eedab442498264013.webp",
+    "static/media/BackgroundEraser_20260328_145041834.webp": "/static/media/BackgroundEraser_20260328_145041834.4a8b6813c5036c34e511.webp",
+    "static/media/BackgroundEraser_20260328_085149500 (1).webp": "/static/media/BackgroundEraser_20260328_085149500 (1).c4678b5539ef4daf1e85.webp",
+    "static/media/BackgroundEraser_20260328_083810335.webp": "/static/media/BackgroundEraser_20260328_083810335.0499d3d8a560af62956c.webp",
+    "static/media/BackgroundEraser_20260328_091548611.webp": "/static/media/BackgroundEraser_20260328_091548611.d3a9b1df35f5079ede2f.webp",
+    "static/media/madeira.jpg": "/static/media/madeira.4276a894211596e57ec7.jpg",
+    "index.html": "/index.html",
+    "main.68c8af84.css.map": "/static/css/main.68c8af84.css.map",
+    "main.1101e7e4.js.map": "/static/js/main.1101e7e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68c8af84.css",
+    "static/js/main.1101e7e4.js"
+  ]
+}
