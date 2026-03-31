@@ -15,8 +15,7 @@ export const addFavorite = async (userId, item) => {
   try {
     const favRef = doc(db, "users", userId, "favorites", item.id.toString());
     
-    // Wir speichern ALLES (...item), nicht nur einzelne Felder
-    // Und wir stellen sicher, dass imageUrl einheitlich ist
+  
     await setDoc(favRef, {
       ...item,
       id: item.id.toString(), // ID als String sichern
@@ -29,9 +28,7 @@ export const addFavorite = async (userId, item) => {
   }
 };
 
-/**
- * Remove um item dos favoritos do usuário
- */
+
 export const removeFavorite = async (userId, itemId) => {
   try {
     const favRef = doc(db, "users", userId, "favorites", itemId.toString());
@@ -42,9 +39,7 @@ export const removeFavorite = async (userId, itemId) => {
   }
 };
 
-/**
- * Escuta os favoritos em tempo real (para o App.js ou Header.js)
- */
+
 export const subscribeToFavorites = (userId, callback) => {
   const favCollection = collection(db, "users", userId, "favorites");
   const q = query(favCollection);
