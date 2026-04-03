@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.68c8af84.css",
-    "main.js": "/static/js/main.e9f26a7e.js",
+    "main.js": "/static/js/main.be22ac57.js",
     "static/media/BAA10-AH-_web_01.jpg": "/static/media/BAA10-AH-_web_01.64128c7067fcc35db862.jpg",
     "static/media/07.jpeg": "/static/media/07.4df71ab9241ea2429b30.jpeg",
     "static/media/body.jpg": "/static/media/body.d1881836c713b2c19ef6.jpg",
@@ -31,10 +31,10 @@
     "static/media/madeira.jpg": "/static/media/madeira.4276a894211596e57ec7.jpg",
     "index.html": "/index.html",
     "main.68c8af84.css.map": "/static/css/main.68c8af84.css.map",
-    "main.e9f26a7e.js.map": "/static/js/main.e9f26a7e.js.map"
+    "main.be22ac57.js.map": "/static/js/main.be22ac57.js.map"
   },
   "entrypoints": [
     "static/css/main.68c8af84.css",
-    "static/js/main.e9f26a7e.js"
+    "static/js/main.be22ac57.js"
   ]
 }
