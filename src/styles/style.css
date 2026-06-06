@@ -1,0 +1,1064 @@
+body{
+  overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
+    font-family: Georgia,  serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f5f9;
+    color:#333;
+}
+
+.top-nav {
+ background: #8b6f48;
+ color:#ffff;
+ padding: 0.5 rem 0 ;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}
+.top-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border:2px solid #a07e0f
+
+}
+
+.logo {
+  display: flex;
+  align-items: center; 
+  gap: 12px;
+  padding-top: 5px; 
+  font-family: 'Arial', sans-serif; /* Mais moderno para nomes comerciais */
+    letter-spacing: 0.5px;
+}  
+
+.logo p {
+  font-size: 0.5rem;    
+  font-weight: bold;     
+  margin: 0;             
+  white-space: nowrap;
+  line-height: 1;
+}
+.user-menu { 
+  display: flex;          
+  gap: 15px;              
+  align-items: center;    
+  font-size: 14px;        
+  color: white;           
+}
+
+
+.user-menu span {
+  cursor: pointer;        
+  display: flex;          
+  align-items: center;
+  gap: 5px;               
+  transition: opacity 0.2s; 
+}
+
+.user-menu span:hover {
+  opacity: 0.8;          
+}
+
+.search-input {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 180px;
+  max-width: 50vw;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1); 
+  padding: 5px 12px;      
+  border-radius: 20px;    
+  font-weight: bold;    
+}
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .user-menu {
+    flex-direction: column;
+    gap: 10px;
+    background: #8b6f48;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none; /* Você pode adicionar toggle com hamburger menu */
+  }
+
+  .top-container {
+    justify-content: space-between;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+.categoria-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; 
+    color: #333;
+    min-width: 80px;
+    transition: transform 0.2s;
+}
+.categorias-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;          
+  justify-content: center;
+  gap: 50px;             
+}
+
+.categoria-item:hover {
+    transform: scale(1.05);
+}
+
+/* Fundo para as categorias circulares */
+.categorias-banner {
+    background: #ffffff;          /* mesma cor do corpo, ou outra que você quiser */
+    padding: 40px 0;              /* espaço em cima e embaixo */
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 -2px 5px rgba(0,0,0,0.05); /* leve sombreado interno opcional */
+}
+
+/* Mantemos o layout das bolinhas */
+.categorias-container {
+    gap: 50px;
+    flex-wrap: wrap; /* se precisar quebrar em linha */
+}
+
+.circulo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 2px solid #f0f0f0;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+}
+
+.circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.categoria-item span {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+      
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+text-align: center;
+position: absolute;
+bottom: 10px;
+width: 100%;
+}
+
+.dot {
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   margin: 0 5px;
+   background-color: rgba(255,255,255,0.5);
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.active-dot {
+background-color: #fff;
+}
+
+section {
+    padding: 4rem 10%; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 { text-align: center;
+ color: #8b6f47;
+                  margin-bottom: 2rem;
+                   font-size: 1rem; }
+        .grid { display: grid;
+                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  gap: 2rem;
+                 }
+        .card { background: white;
+             border-radius:  10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+             text-align: center; 
+             padding: 1rem; 
+             transition: transform 0.3s; }
+
+        .card:hover { transform: scale(1.05); }
+        .card img { width: 100%; 
+                height: auto; 
+                border-radius: 8px; }
+
+        .price { font-weight: bold; 
+                color: #8b6f47; 
+                font-size: 1.2rem; }
+   
+      
+ button {
+  background: #8b6f47;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;      /* Botão ovalado é mais moderno */
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+
+
+button:hover {
+  background: #5d4a31;      
+}
+
+#cart { 
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: white; 
+  padding: 1rem; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+}
+
+.whatsapp { 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center; 
+ font-size: 2rem;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+ text-decoration: none; 
+}
+
+
+.repair-card-horizontal {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px dashed #8b6f47; 
+}
+
+.btn-repair {
+  display: inline-block;
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-repair:hover {
+  background: #8b6f47;
+}
+ 
+
+footer {
+  
+ background: #8b6f47;
+ color: white;
+ text-align: center;
+ padding: 2rem; 
+ margin-top: 2rem;
+}
+
+ @media (max-width: 768px) { 
+  .banner {
+    
+ font-size: 2rem;
+ height: 300px; } 
+
+}
+
+
+/* CONTAINER PRINCIPAL DA ULTRASSOM (DETALHES) */
+.detail-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* BOTÃO VOLTAR (O GPS DO MÉDICO) */
+.btn-back {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: #8b6f48;
+  color: white;
+}
+
+/* ESTRUTURA: FOTO NA ESQUERDA, INFO NA DIREITA */
+.main-content {
+  display: flex;
+  gap: 50px;
+}
+
+/* GALERIA DE MINIATURAS */
+.galeria-container {
+  display: flex;
+  gap: 15px;
+  flex: 1.2;
+}
+
+.sidebar-miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumb-v {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.thumb-v:hover, .thumb-v.ativo {
+  border-color: #8b6f48;
+}
+
+.foto-foco {
+  flex: 1;
+}
+
+.foto-foco img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* LADO DIREITO: TEXTOS E PREÇOS */
+.product-info {
+  flex: 1;
+  text-align: left;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product__price--special {
+  font-size: 28px;
+  font-weight: bold;
+  color: #8b6f48;
+  margin: 15px 0;
+}
+
+/* QUANTIDADE E BOTÃO */
+.seletor-qtd {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 25px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  width: fit-content;
+  border-radius: 8px;
+}
+
+.seletor-qtd button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-comprar {
+  background: #8b6f48;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.btn-comprar:hover {
+  transform: scale(1.02);
+  background: #b46c07;
+}
+
+.card-titulo {
+    font-size: 12px;
+    color: #333;   
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Estilo do carrinho no canto da imagem */
+.btn-add-mini {
+    position: absolute;
+    /* Mudamos de top para bottom */
+    bottom: 10px; 
+    right: 10px;
+    
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+
+.btn-add-mini:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 produtos por linha no PC */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.card-produto {
+   position: relative; 
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    transition: transform 0.2s ease;
+}
+.card-produto img {
+    width: 100%;
+    height: 250px; /* Altura fixa para ficarem todas iguais */
+  object-fit: cover; /* Não distorce a imagem */
+  border-radius: 8px;
+    
+}
+
+/* Informações do produto dentro do card */
+.card-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.product__price--special {
+    font-family: 'Arial', sans-serif;
+    color: #8b6f48; 
+    font-size: 1.1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.product__price--special small {
+    font-size: 0.5rem; 
+    font-weight: normal;
+}
+/* Estabilidade de Imagem */
+.image-container {
+   
+    
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Container principal do catálogo */
+.product-section {
+    max-width: 1200px;  /* largura máxima da vitrine */
+    margin: 0 auto;      /* centraliza no meio da tela */
+    padding: 20px 10px;  /* espaço interno */
+}
+/* Container da Vitrine */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 produtos por linha no PC */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* O Card Individual */
+.product-card-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-container:hover {
+    transform: translateY(-5px);
+}
+
+
+.product-card-image-box {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.product-card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.product-card-info h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.btn-add-cart {
+    background: #8b6f48;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+    .product-card-image-box {
+        height: 160px; 
+    }
+}
+
+.card-produto {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    transition: transform 0.2s ease;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 200px;     
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .galeria-container {
+    flex-direction: column-reverse;
+  }
+  
+  .sidebar-miniaturas {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
+
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+/* --- USER DASHBOARD (PAINEL DO USUÁRIO) --- */
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    color: #8b6f48;
+    font-size: 24px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Menu na esquerda, conteúdo na direita */
+    gap: 40px;
+}
+
+/* Menu Lateral do Painel */
+.dash-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dash-menu li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    color: #555;
+}
+
+.dash-menu li:hover, .dash-menu li.active {
+    background: #f9f5f1;
+    color: #8b6f48;
+}
+
+/* Cartão de Pedido (Bestellungen) */
+.order-card {
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    border-color: #8b6f48;
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-in-arbeit { background: #fff4e5; color: #b46c07; } /* Em ajuste */
+.status-bereit { background: #e6fcf5; color: #0ca678; }   /* Pronto */
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Empilha o menu no topo no mobile */
+    }
+}
+.profile-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.profile-form input:focus {
+    border-color: #8b6f48;
+    outline: none;
+}
+/* Status Farben (Punkt 4 & 9 vom Chef) */
+.status-badge.status-ready { background: #27ae60; color: white; font-weight: bold; }
+.status-badge.status-work { background: #f39c12; color: white; }
+.status-badge.status-active { background: #d4af37; color: white; }
+.status-badge.status-archived { background: #eee; color: #666; }
+
+/* Dashboard Grid (Punkt 5) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+}
+
+/* Mobile Responsiveness (Punkt 5) */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Stacked für Mobile */
+  }
+  .dash-menu {
+    display: flex;
+    overflow-x: auto; /* Horizontales Scroll-Menu für Mobile */
+    white-space: nowrap;
+  }
+}
+
+
+/* CONTAINER DA BARRA DE PESQUISA */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Estilo arredondado (Pill) */
+    padding: 5px 15px;
+    max-width: 400px; /* Ajuste conforme necessário */
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #8b6f47; /* Cor de destaque ao clicar */
+    box-shadow: 0 0 8px rgba(139, 111, 71, 0.2);
+    background-color: #fff;
+}
+
+/* O CAMPO DE TEXTO */
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+/* O BOTÃO DA LUPA */
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #8b6f47; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    transform: scale(1.2); /* Pequeno zoom na lupa no hover */
+}
+
+/* Ajuste para sumir em telas muito pequenas se necessário */
+@media (max-width: 600px) {
+    .search-bar {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Container Principal do Conteúdo do Dashboard */
+.dash-content {
+  padding: 20px;
+  background-color: #fcfaf7; /* Um branco creme muito suave de fundo */
+}
+
+/* Títulos das Secções */
+.dash-section h2 {
+  font-family: 'Playfair Display', serif; /* Uma fonte serifada elegante (adicione no HTML se não tiver) */
+  color: #5d4e36; /* Um castanho dourado escuro */
+  font-weight: 400;
+  border-bottom: 1px solid #e0d7c6;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+.dash-section h2 .icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* --- O GRID DE FAVORITOS --- */
+.favorites-grid-dash {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 10px 0;
+}
+
+/* --- O CARD DO FAVORITO --- */
+.fav-card-dash {
+  background: #ffffff;
+  border: 1px solid #eeebe3; /* Borda quase invisível */
+  border-radius: 4px; /* Cantos ligeiramente arredondados, mais sóbrio */
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(93, 78, 54, 0.03); /* Sombra curtíssima e suave */
+}
+
+/* Efeito ao passar o rato (Hover) */
+.fav-card-dash:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(93, 78, 54, 0.08); /* Sombra mais profunda mas delicada */
+  border-color: #d4cbb7;
+}
+
+/* --- IMAGEM DO PRODUTO --- */
+.fav-img-dash {
+  width: 100%;
+  height: 200px; /* Altura fixa para alinhar o grid */
+  object-fit: cover; /* Garante que a foto não fique esticada */
+  border-bottom: 1px solid #f0ede5;
+  transition: transform 0.6s ease;
+}
+
+.fav-card-dash:hover .fav-img-dash {
+  transform: scale(1.03); /* Zoom micro na imagem */
+}
+
+/* --- INFO DO PRODUTO (TEXTO) --- */
+.fav-info-dash {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center; /* Centralizado estilo boutique */
+}
+
+.fav-info-dash p {
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase; /* Texto em maiúsculas dá um ar premium */
+  letter-spacing: 1px;
+}
+
+.fav-info-dash small {
+  font-size: 1.1rem;
+  color: #8b6f47; /* Cor dourada da sua marca */
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* --- BOTÃO REMOVER (O pulo do gato chique) --- */
+.btn-remove-fav {
+  background-color: transparent;
+  border: 1px solid #d4cbb7;
+  color: #8b6f47;
+  padding: 8px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Empurra o botão para o fundo do card */
+  width: 100%;
+}
+
+/* Hover do botão remover (inverte as cores suavemente) */
+.btn-remove-fav:hover {
+  background-color: #f7f3eb;
+  border-color: #c0b5a0;
+  color: #5d4e36;
+}
+
+/* Estilo para a mensagem de lista vazia */
+.dash-section p {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Responsividade para telemóveis */
+@media (max-width: 600px) {
+  .favorites-grid-dash {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  
+  .fav-img-dash {
+    height: 150px;
+  }
+  
+  .fav-info-dash {
+    padding: 12px;
+  }
+  
+  .fav-info-dash p {
+    font-size: 0.85rem;
+  }
+}
+/* Adicione no topo do seu arquivo CSS principal */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@400;500;600&display=swap');
+.btn-buy-fav-direct {
+  width: 100%;
+  background-color: #8b6f47; /* Tom dourado/café elegante */
+  color: white;
+  border: none;
+  padding: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espaço entre o 🛒 e o texto */
+  transition: all 0.3s ease;
+}
+
+.btn-buy-fav-direct:hover {
+  background-color: #5d4e36;
+  transform: translateY(-2px);
+}

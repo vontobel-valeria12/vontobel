@@ -1,0 +1,27 @@
+import React, { forwardRef, useImperativeHandle, useRef, useEffect } from 'react';
+import { fabric } from 'fabric';
+
+const MugCanvasEditor = forwardRef((props, ref) => {
+  const canvasElementRef = useRef(null);
+  const fabricRef = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+    changeBackground: (color) => {
+      if (fabricRef.current) {
+        fabricRef.current.setBackgroundColor(color, () => fabricRef.current.renderAll());
+      }
+    }
+  }));
+
+  useEffect(() => {
+    fabricRef.current = new fabric.Canvas(canvasElementRef.current, {
+      width: 600,
+      height: 300
+    });
+    return () => fabricRef.current.dispose();
+  }, []);
+
+  return <canvas ref={canvasElementRef} />;
+});
+
+export default MugCanvasEditor;
