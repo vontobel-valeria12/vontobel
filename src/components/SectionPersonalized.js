@@ -22,17 +22,17 @@ function SectionPersonalized({ onAdd, onSelectProduct, searchTerm, favorites, on
   const staticProducts = [
     { id: 'pers_1', name: "Unisex Basic T-Shirt", image: imgBaa, price: 35.00, desc: "Individuell bedruckbar nach Ihren Wünschen." },
     { id: 'pers_2', name: "Mini T-SHIRT", image: igmtray, price: 15.00, desc: "Süsses Mini T-Shirt für Dekoration oder Geschenke." },
-    { id: 'pers_3', name: "Latzschürze Klassik", image: imgaventais, price: 45.00, desc: "Personalisierbar mit Ihrem Design." },
+    { id: 'pers_3', name: "Latzschürze Klassik", image: imgaventais, price: 25.00, desc: "Personalisierbar mit Ihrem Design." },
     { id: 'pers_4', name: "Keramiktasse", image: imgmug, price: 25.00, desc: "Klassische weisse Tasse, individuell gestaltbar." },
     { id: 'pers_5', name: "Geldbörse", image: imgmoedeiro, price: 20.00, desc: "Kompakt und individuell gestaltbar." },
     { id: 'pers_6', name: "Schlüsselanhänger", image: imgSchlüsselanhänger, price: 12.00, desc: "Inklusive Einkaufswagenchip." },
-    { id: 'pers_7', name: "Kosmetik Taschen", image: Losmetiklaschen, price: 28.00, desc: "Personalisierbar mit Ihrem Design." },
-    { id: 'pers_8', name: "Täsche mit Necessaire", image: Tasche, price: 65.00, desc: "Set aus Tasche und passender Kosmetiktasche." },
+    { id: 'pers_7', name: "Kosmetik Taschen", image: Losmetiklaschen, price: 15.00, desc: "Personalisierbar mit Ihrem Design." },
+    { id: 'pers_8', name: "Täsche mit Necessaire", image: Tasche, price: 45.00, desc: "Set aus Tasche und passender Kosmetiktasche." },
     { id: 'pers_9', name: "Bodykleidung", image: Body, price: 22.00, desc: "Individuelle Baby-Bodys aus weichem Stoff." },
     { id: 'pers_10', name: "Flasche", image: Garraf, price: 25.00, desc: "Personalisierte Trinkflaschen." },
     { id: 'pers_11', name: "Weinkiste", image: imgbox, price: 40.00, desc: "Weinkiste aus naturfarbenem Kieferholz." },
     { id: 'pers_12', name: "Necessaire", image: imgcarteira, price: 24.00, desc: "Personalisierbar mit Ihrem Design." },
-    { id: 'pers_13', name: "Turnbeutel", image: imgmochila, price: 18.00, desc: "Gestalten Sie Ihre eigene Sporttasche." },
+    { id: 'pers_13', name: "Turnbeutel", image: imgmochila, price: 12.00, desc: "Gestalten Sie Ihre eigene Sporttasche." },
   ];
 
   // Kombiniere statische Produkte mit den dynamischen Produkten aus Firebase
